@@ -1,7 +1,7 @@
-import styles from './CabecalhoLink.module.css';
+import styles from './LinkHeader.module.css';
 import { Link } from 'react-router-dom';
 
-function CabecalhoLink({ url, children }) {
+function LinkHeader({ url, children }) {
 	return (
 		<Link to={url} className={styles.link}>
 			{children}
@@ -9,4 +9,4 @@ function CabecalhoLink({ url, children }) {
 	);
 }
 
-export default CabecalhoLink;
+export default LinkHeader;

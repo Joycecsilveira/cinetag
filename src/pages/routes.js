@@ -1,11 +1,11 @@
-import Inicio from './Inicio';
+import Start from './Start';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 function AppRoutes() {
 	return (
 		<BrowserRouter>
 			<Routes>
-				<Route path="/" element={<Inicio />}></Route>
+				<Route path="/" element={<Start />}></Route>
 			</Routes>
 		</BrowserRouter>
 	);
