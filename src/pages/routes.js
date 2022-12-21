@@ -14,7 +14,7 @@ function AppRoutes() {
 				<FavoritesProvider>
 					<Routes>
 						<Route path="/" element={<Start />}></Route>
-						<Route path="/Favoritos" element={<Favorites />}></Route>
+						<Route path="/favoritos" element={<Favorites />}></Route>
 					</Routes>
 				</FavoritesProvider>
 			</Container>
