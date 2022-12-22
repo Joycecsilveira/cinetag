@@ -4,10 +4,10 @@ export const FavoriteContext = createContext();
 FavoriteContext.displayName = 'Favorites';
 
 export default function FavoritesProvider({ children }) {
-	const [favorites, setFavorites] = useState([]);
+	const [favorite, setFavorite] = useState([]);
 
 	return (
-		<FavoriteContext.Provider value={{ favorites, setFavorites }}>
+		<FavoriteContext.Provider value={{ favorite, setFavorite }}>
 			{children}
 		</FavoriteContext.Provider>
 	);
@@ -21,13 +21,13 @@ export function useFavoriteContext() {
 			(item) => item.id === newFavorite.id
 		);
 
-		let newList = [favorite];
+		let newList = [...favorite];
 
 		if (!favoriteRepeated) {
 			newList.push(newFavorite);
 			return setFavorite(newList);
 		}
-		newList.splace(newList.indexOf(newFavorite), 1);
+		newList.splice(newList.indexOf(newFavorite), 1);
 		return setFavorite(newList);
 	}
 	return {
